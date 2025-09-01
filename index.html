@@ -1,179 +1,368 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stickerland</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stickerland — Stickers personalizados</title>
+    <meta name="description" content="Stickers personalizados para laptops, termos y más. Diseños únicos para tu estilo.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <script>
+    window.STICKERLAND_WA = { phone: "50499042438" };
+    </script>
 
-  <!-- Barra superior -->
-  <div class="topbar">
-    <div class="announce">
-      <div class="wrap">✨ Bienvenido a Stickerland – Stickers personalizados al mejor precio ✨</div>
-    </div>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="#hero">
+                <img src="img/logo.png" alt="Logo Stickerland" class="brand-logo">
+                <span class="brand-name">Stickerland</span>
+            </a>
 
-    <!-- Nav -->
-    <div class="navwrap">
-      <div class="wrap navrow">
+            <div class="search-wrap">
+                <input id="searchInput" class="search-input" placeholder="Buscar Stickers ... " />
+                <button class="search-btn" id="searchBtn" title="Buscar">🔎</button>
+            </div>
 
-        <!-- Aquí va el logo -->
-        <a class="brand" href="#hero">
-          <img src="img/logo.png" alt="Logo Stickerland" style="height:42px; width:auto; vertical-align:middle; margin-right:6px;">
-          <span>Stickerland</span>
-        </a>
-
-        <!-- buscador -->
-        <form class="search" onsubmit="return false;">
-          <input type="text" id="searchInput" placeholder="Buscar stickers...">
-          <button type="button" onclick="buscarStickers()">🔍</button>
-        </form>
-
-        <!-- Acciones -->
-        <div class="actions">
-          <a href="#catalogo" class="mini">Catálogo</a>
-          <a href="https://wa.me/504XXXXXXXX" target="_blank" class="mini">WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menú categorías -->
-    <div class="menu">
-      <div class="wrap menurow">
-        <a href="#" class="menulink is-active" onclick="filtrarCategoria('todos')">Todos</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('mascotas')">Mascotas</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('nombres')">Nombres</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('fandoms')">Fandoms Random</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('anime')">Anime y Caricaturas</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('kawaii')">Kawaii</a>
-        <a href="#" class="menulink" onclick="filtrarCategoria('personalizado')">Personalización</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="wrap hero-content">
-      <div class="hero-text">
-        <h1>Stickers que hablan por ti</h1>
-        <p>Personaliza termos, cuadernos, laptops, cascos, cuernos y más... al mejor precio y con tu estilo único ✨</p>
-        <div class="hero-actions">
-          <a href="#catalogo" class="btn">Ver catálogo</a>
-          <a href="https://wa.me/504XXXXXXXX" target="_blank" class="btn btn-outline">Haz tu pedido</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="img/sticker1.jpg" alt="Ejemplo de stickers">
-      </div>
-    </div>
-  </section>
-
-  <!-- Estilos -->
-  <section class="estilos">
-    <div class="wrap">
-      <h2>Estilos de Stickers</h2>
-      <p class="sub">Elige entre nuestras categorías más populares</p>
-      <div class="estilos-grid">
-        <div class="estilo-card">
-          <img src="img/sticker2.jpg" alt="Mascotas">
-          <div class="estilo-info">
-            <h3>Mascotas</h3>
-            <button class="chip" onclick="filtrarCategoria('mascotas')">Ver</button>
-          </div>
-        </div>
-        <div class="estilo-card">
-          <img src="img/sticker3.jpg" alt="Anime">
-          <div class="estilo-info">
-            <h3>Anime y Caricaturas</h3>
-            <button class="chip" onclick="filtrarCategoria('anime')">Ver</button>
-          </div>
-        </div>
-        <div class="estilo-card">
-          <img src="img/sticker4.jpg" alt="Kawaii">
-          <div class="estilo-info">
-            <h3>Kawaii</h3>
-            <button class="chip" onclick="filtrarCategoria('kawaii')">Ver</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Catálogo -->
-  <section class="catalogo" id="catalogo">
-    <div class="wrap">
-      <div class="catalogo-head">
-        <h2>Catálogo</h2>
-      </div>
-      <div class="productos" id="productos">
-
-        <div class="card" data-cat="mascotas">
-          <img src="img/sticker2.jpg" alt="Sticker Mascota">
-          <div class="info">
-            <h3>Sticker Mascota</h3>
-            <p class="precio">L 50</p>
-            <p class="sub">Personaliza tu mascota favorita</p>
-          </div>
-          <a href="https://wa.me/504XXXXXXXX?text=Hola!%20Quiero%20el%20Sticker%20Mascota" target="_blank" class="btn wa">Comprar</a>
+            <div class="nav-actions">
+                <a class="btn-link" href="#catalogo">Catálogo</a>
+            </div>
         </div>
 
-        <div class="card" data-cat="anime">
-          <img src="img/sticker3.jpg" alt="Sticker Anime">
-          <div class="info">
-            <h3>Sticker Anime</h3>
-            <p class="precio">L 60</p>
-            <p class="sub">Perfecto para tu laptop o cuaderno</p>
-          </div>
-          <a href="https://wa.me/504XXXXXXXX?text=Hola!%20Quiero%20el%20Sticker%20Anime" target="_blank" class="btn wa">Comprar</a>
+        <nav class="container categories" aria-label="Categorías">
+            <button class="chip is-active" data-cat="todos">Todos</button>
+            <button class="chip" data-cat="mascotas">Mascotas</button>
+            <button class="chip" data-cat="nombres">Nombres</button>
+            <button class="chip" data-cat="anime">Anime y Caricaturas</button>
+            <button class="chip" data-cat="kawaii">Kawaii</button>
+            <button class="chip" data-cat="personalizacion">Personalización</button>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero container">
+        <div class="hero-left">
+            <h1><span class="gradient-text">¡STICKERS ÚNICOS PARA CADA ESTILO!</span></h1>
+            <p class="lead">Stickers personalizados para lácteos, termos, cuernos y todo lo que se te ocurra. Con el mejor precio asequible.</p>
+            <div class="hero-ctas">
+                <a href="#catalogo" class="btn-cta gradient-btn">Ver stickers</a>
+                <a href="#" class="btn-ghost" id="cta-custom">Crear mi Sticker Personalizado</a>
+            </div>
         </div>
+        <div class="hero-right">
+            </div>
+    </section>
 
-        <div class="card" data-cat="kawaii">
-          <img src="img/sticker4.jpg" alt="Sticker Kawaii">
-          <div class="info">
-            <h3>Sticker Kawaii</h3>
-            <p class="precio">L 45</p>
-            <p class="sub">Dale ternura a cualquier objeto</p>
-          </div>
-          <a href="https://wa.me/504XXXXXXXX?text=Hola!%20Quiero%20el%20Sticker%20Kawaii" target="_blank" class="btn wa">Comprar</a>
+    <main id="catalogo" class="container catalogo">
+        <h2 class="section-title">Catálogo</h2>
+        <p class="section-sub">Elige una categoría o busca por nombre. Hacé clic en Comprar para contactarnos por WhatsApp. <br>Ofrecemos tamaños: Pequeño (5x5cm) y Mediano (8x8cm).</p>
+
+        <div class="grid" id="productsGrid">
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro1.jpg" alt="Sticker Beagle juguetón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Beagle Juguetón</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Beagle Juguetón">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro2.jpg" alt="Sticker Bulldog Francés tierno" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bulldog Francés</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Bulldog Francés">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro3.jpg" alt="Sticker Pomerania Esponjoso" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pomerania Esponjoso</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Pomerania Esponjoso">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro4.jpg" alt="Sticker Bull Terrier juguetón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bull Terrier Juguetón</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Bull Terrier Juguetón">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro5.jpg" alt="Sticker Bull Terrier valiente" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bull Terrier Valiente</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Bull Terrier Valiente">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro6.jpg" alt="Sticker Pastor Alemán cachorro" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pastor Alemán Bebé</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Pastor Alemán Bebé">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card" data-cat="nombres">
+                <img src="img/Samuel.jpg" alt="Sticker de nombre Samuel" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Samuel</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Nombre Samuel">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="nombres">
+                <img src="img/Maria.jpg" alt="Sticker de nombre Maria" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Maria</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Nombre Maria">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="nombres">
+                <img src="img/Valeria.jpg" alt="Sticker de nombre Valeria" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Valeria</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Nombre Valeria">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="anime">
+                <img src="img/Satoru y suguru-jujutsu kaisen.jpg" alt="Sticker Satoru y Suguru (Jujutsu Kaisen)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Jujutsu Kaisen</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Jujutsu Kaisen">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Shinji-evangelion.jpg" alt="Sticker de Shinji (Evangelion)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Shinji (Evangelion)</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Shinji (Evangelion)">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Denji.jpg" alt="Sticker de Denji y Pochita (Chainsaw Man)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Denji y Pochita</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Denji y Pochita">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Mitsuha-Your Name.jpg" alt="Sticker Mitsuha (Your Name)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Mitsuha (Your Name)</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Mitsuha (Your Name)">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Snorlax-pokemon.jpg" alt="Sticker de Snorlax (Pokemon)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Snorlax (Pokémon)</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Snorlax (Pokémon)">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Totoro-mi vecino totoro.jpg" alt="Sticker de Totoro (Mi Vecino Totoro)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Totoro</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Totoro">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Polarchiquito.jpg" alt="Sticker de Pingu" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pingu</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Pingu">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Pou.jpg" alt="Sticker de Pou" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pou</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Pou">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Nyan cat.jpg" alt="Sticker de Nyan Cat" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nyan Cat</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Nyan Cat">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card" data-cat="mascotas">
+                <img src="img/gato1.jpg" alt="Sticker de gato blanco" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Gatito Curioso</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Gatito Curioso">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Gatofresa.jpg" alt="Sticker de gato fresa" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Gatofresa</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Gatofresa">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Lovecat.jpg" alt="Sticker de gato con corazón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Love Cat</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Love Cat">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Ranitahongo.jpg" alt="Sticker de rana con hongo" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Ranita Hongo</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Ranita Hongo">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="kawaii">
+                <img src="img/Cute duck with bread.jpg" alt="Sticker de pato con pan" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Patito con Pan</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Patito con Pan">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="kawaii">
+                <img src="img/patoacostado.jpg" alt="Sticker de pato acostado" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Patito Relajado</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Patito Relajado">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="kawaii">
+                <img src="img/Patotective.jpg" alt="Sticker de pato detective" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pato Detective</h3>
+                    <p class="card-desc">Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Pato Detective">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="personalizacion">
+                <img src="img/personalizacion_placeholder.jpg" alt="Sticker Personalizado" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">¡Tu Sticker, Tu Diseño!</h3>
+                    <p class="card-desc">Envíanos tu imagen y la transformamos en un sticker único. ¡Tu creatividad es el límite! Sticker Glossy - Pequeño (5x5cm) o Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <a class="btn-buy" data-name="Sticker Personalizado">¡Haz tu Sticker!</a>
+                    </div>
+                </div>
+            </article>
+
         </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="sitefooter">
-    <div class="wrap footergrid">
-      <div class="fcol">
-        <div class="fbrand">SL</div>
-        <p>Stickerland – Personaliza tu mundo con estilo.</p>
-      </div>
-      <div class="fcol">
-        <h4>Categorías</h4>
-        <a href="#catalogo">Mascotas</a><br>
-        <a href="#catalogo">Anime</a><br>
-        <a href="#catalogo">Kawaii</a><br>
-      </div>
-      <div class="fcol">
-        <h4>Contacto</h4>
-        <p>Tegucigalpa, Honduras</p>
-        <p>WhatsApp: +504 XXXXXXXX</p>
-      </div>
-      <div class="fcol">
-        <h4>Síguenos</h4>
-        <div class="socials">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <img src="img/logo.png" alt="Logo" style="height:36px">
+                <p class="muted">Stickerland — Personalizamos tu mundo.</p>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>WhatsApp: <a id="footer-wh" href="#">—</a></p>
+                <p>Email: stickerlandhn@gmail.com</p>
+            </div>
+
+            <div>
+                <h4>Categorías</h4>
+                <p>Mascotas · Anime · Kawaii · Nombres · Personalización</p>
+            </div>
+
+            <div>
+                <h4>Horario</h4>
+                <p>Lun–Vie 9:00–18:00</p>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footnote">© 2025 Stickerland. Todos los derechos reservados.</div>
-  </footer>
+        <div class="container copyright">© 2025 Stickerland</div>
+    </footer>
 
-  <!-- Botón flotante WhatsApp -->
-  <a id="wa-float" href="https://wa.me/504XXXXXXXX" target="_blank" title="WhatsApp">💬</a>
+    <a id="wa-float" class="wa-float" href="#" title="Chatear por WhatsApp">💬</a>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
-
