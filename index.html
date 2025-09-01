@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stickerland — Stickers personalizados</title>
+    <meta name="description" content="Stickers personalizados para laptops, termos y más. Diseños únicos para tu estilo.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <script>
+    window.STICKERLAND_WA = { phone: "50499042438" };
+    </script>
+
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="#hero">
+                <img src="img/logo.png" alt="Logo Stickerland" class="brand-logo">
+                <span class="brand-name">Stickerland</span>
+            </a>
+
+            <div class="search-wrap">
+                <input id="searchInput" class="search-input" placeholder="Buscar Stickers ... " />
+                <button class="search-btn" id="searchBtn" title="Buscar">🔎</button>
+            </div>
+
+            <div class="nav-actions">
+                <a class="btn-link" href="#catalogo">Catálogo</a>
+            </div>
+        </div>
+
+        <nav class="container categories" aria-label="Categorías">
+            <button class="chip is-active" data-cat="todos">Todos</button>
+            <button class="chip" data-cat="mascotas">Mascotas</button>
+            <button class="chip" data-cat="nombres">Nombres</button>
+            <button class="chip" data-cat="anime">Anime y Caricaturas</button>
+            <button class="chip" data-cat="kawaii">Kawaii</button>
+            <button class="chip" data-cat="personalizacion">Personalización</button>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero container">
+        <div class="hero-left">
+            <h1><span class="gradient-text">¡STICKERS ÚNICOS PARA CADA ESTILO!</span></h1>
+            <p class="lead">Stickers personalizados para lácteos, termos, cuernos y todo lo que se te ocurra. Con el mejor precio asequible.</p>
+            <div class="hero-ctas">
+                <a href="#catalogo" class="btn-cta gradient-btn">Ver stickers</a>
+                <a href="#" class="btn-ghost" id="cta-custom">Crear mi Sticker Personalizado</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            </div>
+    </section>
+
+    <main id="catalogo" class="container catalogo">
+        <h2 class="section-title">Catálogo</h2>
+        <p class="section-sub">Elige una categoría o busca por nombre. Hacé clic en Comprar para contactarnos por WhatsApp. <br>Ofrecemos tamaños: Pequeño (5x5cm) y Mediano (8x8cm).</p>
+
+        <div class="grid" id="productsGrid">
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro1.jpg" alt="Sticker Beagle juguetón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Beagle Juguetón</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Beagle Juguetón" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro2.jpg" alt="Sticker Bulldog Francés tierno" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bulldog Francés</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Bulldog Francés" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro3.jpg" alt="Sticker Pomerania Esponjoso" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pomerania Esponjoso</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Pomerania Esponjoso" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro4.jpg" alt="Sticker Bull Terrier juguetón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bull Terrier Juguetón</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Bull Terrier Juguetón" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro5.jpg" alt="Sticker Bull Terrier valiente" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bull Terrier Valiente</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Bull Terrier Valiente" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="mascotas">
+                <img src="img/Perro6.jpg" alt="Sticker Pastor Alemán cachorro" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pastor Alemán Bebé</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Pastor Alemán Bebé" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card" data-cat="nombres">
+                <img src="img/Samuel.jpg" alt="Sticker de nombre Samuel" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Samuel</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Nombre Samuel" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="nombres">
+                <img src="img/Maria.jpg" alt="Sticker de nombre Maria" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Maria</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Nombre Maria" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="nombres">
+                <img src="img/Valeria.jpg" alt="Sticker de nombre Valeria" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nombre Valeria</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Nombre Valeria" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="anime">
+                <img src="img/Satoru y suguru-jujutsu kaisen.jpg" alt="Sticker Satoru y Suguru (Jujutsu Kaisen)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Jujutsu Kaisen</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Jujutsu Kaisen" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Shinji-evangelion.jpg" alt="Sticker de Shinji (Evangelion)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Shinji (Evangelion)</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Shinji (Evangelion)" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Denji.jpg" alt="Sticker de Denji y Pochita (Chainsaw Man)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Denji y Pochita</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Denji y Pochita" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Mitsuha-Your Name.jpg" alt="Sticker Mitsuha (Your Name)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Mitsuha (Your Name)</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Mitsuha (Your Name)" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Snorlax-pokemon.jpg" alt="Sticker de Snorlax (Pokemon)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Snorlax (Pokémon)</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Snorlax (Pokémon)" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Totoro-mi vecino totoro.jpg" alt="Sticker de Totoro (Mi Vecino Totoro)" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Totoro</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Totoro" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Polarchiquito.jpg" alt="Sticker de Pingu" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pingu</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Pingu" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Pou.jpg" alt="Sticker de Pou" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pou</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Pou" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="anime">
+                <img src="img/Nyan cat.jpg" alt="Sticker de Nyan Cat" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Nyan Cat</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 30</div>
+                        <a class="btn-buy" data-name="Nyan Cat" data-price="30">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card" data-cat="mascotas">
+                <img src="img/gato1.jpg" alt="Sticker de gato blanco" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Gatito Curioso</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Gatito Curioso" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Gatofresa.jpg" alt="Sticker de gato fresa" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Gatofresa</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Gatofresa" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Lovecat.jpg" alt="Sticker de gato con corazón" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Love Cat</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Love Cat" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="mascotas">
+                <img src="img/Ranitahongo.jpg" alt="Sticker de rana con hongo" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Ranita Hongo</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Ranita Hongo" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="kawaii">
+                <img src="img/Cute duck with bread.jpg" alt="Sticker de pato con pan" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Patito con Pan</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Patito con Pan" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="kawaii">
+                <img src="img/patoacostado.jpg" alt="Sticker de pato acostado" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Patito Relajado</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Patito Relajado" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="kawaii">
+                <img src="img/Patonendufar.jpg" alt="Sticker de pato de Patoaventuras" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Patito Donald</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Patito Donald" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card" data-cat="kawaii">
+                <img src="img/Patotective.jpg" alt="Sticker de pato detective" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Pato Detective</h3>
+                    <p class="card-desc">Vinil - Mediano (8x8cm)</p>
+                    <div class="card-meta">
+                        <div class="price">L. 25</div>
+                        <a class="btn-buy" data-name="Pato Detective" data-price="25">Comprar</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-cat="personalizacion">
+                <img src="img/personalizacion_placeholder.jpg" alt="Sticker Personalizado" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">¡Tu Sticker, Tu Diseño!</h3>
+                    <p class="card-desc">Envíanos tu imagen y la transformamos en un sticker único. ¡Tu creatividad es el límite!</p>
+                    <div class="card-meta">
+                        <div class="price">Desde L. 35</div>
+                        <a class="btn-buy" data-name="Sticker Personalizado" data-price="35">¡Haz tu Sticker!</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <img src="img/logo.png" alt="Logo" style="height:36px">
+                <p class="muted">Stickerland — Personalizamos tu mundo.</p>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>WhatsApp: <a id="footer-wh" href="#">—</a></p>
+                <p></p>
+            </div>
+
+            <div>
+                <h4>Categorías</h4>
+                <p>Mascotas · Anime · Kawaii · Nombres · Personalización</p>
+            </div>
+
+            <div>
+               
+            </div>
+        </div>
+        <div class="container copyright">© 2025 Stickerland</div>
+    </footer>
+
+    <a id="wa-float" class="wa-float" href="#" title="Chatear por WhatsApp">💬</a>
+
+    <script src="app.js"></script>
+</body>
+</html>
